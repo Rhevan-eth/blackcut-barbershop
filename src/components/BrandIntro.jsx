@@ -88,14 +88,9 @@ export default function BrandIntro() {
             <div className="img-bw-container" style={{ borderRadius: 'var(--radius-sm)', height: '420px', border: '1px solid var(--border-hairline)' }}>
               <img
                 src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800&auto=format&fit=crop"
-                alt="[PLACEHOLDER: detail image — barber tools or haircut precision]"
+                alt="BLACKCUT Barbershop Approach"
                 className="img-bw"
               />
-            </div>
-            <div style={{ marginTop: '8px' }}>
-              <span className="placeholder-badge">
-                [PLACEHOLDER: brand approach detail image]
-              </span>
             </div>
           </div>
         </div>

@@ -28,7 +28,7 @@ export default function Hero() {
         backgroundColor: '#0A0A0A',
       }}
     >
-      {/* Background Image with Dark Gradient Overlays */}
+      {/* Background Image with Subtle Dark CSS Overlay */}
       <div
         style={{
           position: 'absolute',
@@ -37,23 +37,29 @@ export default function Hero() {
         }}
       >
         <img
-          src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1920&auto=format&fit=crop"
-          alt="[PLACEHOLDER: hero image — barber mid-cut or moody barbershop interior]"
+          src="/blackcut-hero.webp"
+          alt="BLACKCUT Barbershop"
+          onError={(e) => {
+            if (!e.currentTarget.dataset.retried) {
+              e.currentTarget.dataset.retried = 'true';
+              e.currentTarget.src = "/public/blackcut-hero.webp";
+            }
+          }}
           style={{
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            filter: 'grayscale(100%) contrast(125%) brightness(40%)',
+            filter: 'brightness(70%) contrast(110%)',
           }}
         />
-        {/* Gradients for readable text overlay */}
+        {/* Subtle Dark CSS Overlay for Text Readability */}
         <div
           style={{
             position: 'absolute',
             inset: 0,
             background: `
-              linear-gradient(to right, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.65) 50%, rgba(10,10,10,0.85) 100%),
-              linear-gradient(to bottom, rgba(10,10,10,0.8) 0%, transparent 40%, rgba(10,10,10,0.95) 100%)
+              linear-gradient(to right, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.5) 50%, rgba(10,10,10,0.8) 100%),
+              linear-gradient(to bottom, rgba(10,10,10,0.7) 0%, transparent 40%, rgba(10,10,10,0.95) 100%)
             `,
           }}
         />
@@ -116,7 +122,7 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-gold"
-            title="Book an Appointment via WhatsApp [PLACEHOLDER: WhatsApp link]"
+            title="Book an Appointment via WhatsApp"
           >
             Book an Appointment
           </a>
@@ -127,13 +133,6 @@ export default function Hero() {
           >
             Explore Services
           </a>
-        </div>
-
-        {/* Developer / Client Placeholder Marker */}
-        <div style={{ marginTop: '24px' }}>
-          <span className="placeholder-badge">
-            [PLACEHOLDER: hero image — barber mid-cut or moody barbershop interior]
-          </span>
         </div>
       </div>
 
